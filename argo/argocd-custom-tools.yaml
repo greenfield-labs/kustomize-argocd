@@ -22,7 +22,8 @@ spec:
             - name: KUBECTL_VERSION
               value: "1.22.0"
           args:
-            - mv ksops /custom-tools/;
+            - mkdir -p /custom-tools/helm-plugins
+              mv ksops /custom-tools/;
               mv $GOPATH/bin/kustomize /custom-tools/;
               wget -qO- https://github.com/jkroepke/helm-secrets/releases/download/v${HELM_SECRETS_VERSION}/helm-secrets.tar.gz | tar -C /custom-tools/helm-plugins -xzf-;
               wget -qO /custom-tools/sops https://github.com/mozilla/sops/releases/download/v${SOPS_VERSION}/sops-v${SOPS_VERSION}.linux
