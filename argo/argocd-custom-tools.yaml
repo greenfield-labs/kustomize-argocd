@@ -10,7 +10,7 @@ spec:
           emptyDir: {}
       initContainers:
         - name: init
-          image: thomasv314/wget:latest
+          image: ghcr.io/greenfield-labs/debian-tools:main
           command: ["/bin/sh", "-c"]
           env:
             - name: HELM_SECRETS_VERSION
